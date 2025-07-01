@@ -5,6 +5,8 @@ pymupdf
 flask
 pdfplumber
 flask-cors
+gunicorn
+sentence-transformers==2.6.1
 uvicorn
 pymupdf4llm
 langchain-groq
