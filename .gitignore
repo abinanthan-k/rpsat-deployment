@@ -1,7 +1,6 @@
 __pycache__/
 services/test.py
 req.txt
-config.py
 main.py
 *.mp3
 .env

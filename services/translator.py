@@ -14,5 +14,4 @@ def translate_text(src, dest_lang):
         result.append(obj.translate(text_needed))
         index += 100
     return " ".join(result)
-
-# print(langs_dict)
+print(langs_dict)
