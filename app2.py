@@ -33,8 +33,7 @@ if submit and uploaded_file:
         translated = translate_text(result_text, languages[language])
     
     with st.spinner("Building audio.."):
-        audio_path = f"static/audio/audio_{uuid.uuid4().hex}.mp3"
-        generate_audio(translated, audio_path, languages[language])
+        generate_audio(translated, languages[language])
     
     st.success("✅ Summary Generated!")
     st.markdown(f"**Time taken:** {round(time.time() - start, 2)} sec")
