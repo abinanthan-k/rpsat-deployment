@@ -33,12 +33,10 @@ if submit and uploaded_file:
         translated = translate_text(result_text, languages[language])
     
     with st.spinner("Building audio.."):
-        generate_audio(translated, languages[language])
+        audio = generate_audio(translated, languages[language])
     
     st.success("✅ Summary Generated!")
     st.markdown(f"**Time taken:** {round(time.time() - start, 2)} sec")
     st.markdown("**Summary**")
     st.markdown(str(translated))
-
-    with open(audio_path, "rb") as f:
-        st.audio(f.read(), format="audio/mp3")
+    st.audio(audio, format='audio/mp3')
